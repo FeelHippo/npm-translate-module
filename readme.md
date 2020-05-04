@@ -1,3 +1,3 @@
 # @feelhippo/translate
 
-![npm](https://img.shields.io/badge/npm-version-blue)
+![ npm (scoped) ](https://img.shields.io/badge/npm-v1.0.0-blue)
