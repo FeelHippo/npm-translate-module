@@ -1,4 +1,4 @@
 # @feelhippo/translate
 
 [![npm (scoped)]]
-(https://img.shields.io/npm/v/@feelhippo/translate.svg)]
+(https://img.shields.io/badge/npm-version-blue)]
