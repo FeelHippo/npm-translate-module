@@ -1,4 +1,17 @@
 {
     "name": "@feelhippo/translate",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "description": "Translate i18n locales automatically",
+    "license": "MIT",
+    "repository": "@FeelHippo/npm-translate-module",
+    "main": "index.js",
+    "keywords": [
+        "i18n",
+        "npm",
+        "package",
+        "feelhippo"
+    ],
+    "dependencies": {
+        "node-fetch": "^2.6.0"
+    }
 }
