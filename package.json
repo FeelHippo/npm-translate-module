@@ -1,6 +1,6 @@
 {
     "name": "@feelhippo/translate",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Translate i18n locales automatically",
     "license": "MIT",
     "repository": "@FeelHippo/npm-translate-module",
