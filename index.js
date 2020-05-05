@@ -1,5 +1,6 @@
 var fs = require('fs');
 const fetch = require("node-fetch");
+const path = require('path')
 
 
 module.exports = (directory) => {
@@ -11,7 +12,7 @@ module.exports = (directory) => {
             return;
         }
         filenames.forEach(function(filename) {
-            fs.readFile(directory + filename, 'utf8', function(err, content) {
+            fs.readFile(directory + '/' + filename, 'utf8', function(err, content) {
                 if (err) {
                     console.log(err);
                     return;
@@ -29,11 +30,11 @@ module.exports = (directory) => {
                     .then( response => response.json())
                     .then( data => output[entry[1]] = data.text[0]).then(() => {
                         // save new file to disk
-                        fs.writeFileSync(directory + filename, JSON.stringify(output))
+                        fs.writeFileSync(directory + '/' + filename, JSON.stringify(output))
                     });
                 })
             });
-            console.log(`${filename} succesfully saved: ${directory}${filename}`);
+            console.log(`${filename} succesfully saved: ${directory}\\${filename}`);
         })
     })
 }
