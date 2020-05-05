@@ -26,12 +26,31 @@ For development, you will only need Node.js and a node global package, Yarn, ins
 ## Configure app
 
 ``` js
-// app.js
+// package.json
+"scripts": {
+    "translate": "node translateLocales.js"
+}
+```
+``` js
+// translateLocales.js
+
+
+const path = require('path')
 
 // import package
 const translate = require('@feelhippo/translate');
-// define the location of the i18n locales
-const directory = path.join(__dirname, '/locales')
 
-translate(directory)
+// define the location of the i18n locales
+const directory = path.join(__dirname, './locales');
+
+// execute translation
+(async () => {
+    translate(directory);
+    console.log('Translated all Locales');
+    
+})().catch(err => {
+    console.log(err);
+})
 ```
+
+Considering the package will only be used in production, I have opted for a script to be run before the server is started, but feel free to adapt the code to your needs!
